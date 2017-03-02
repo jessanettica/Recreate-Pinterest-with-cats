@@ -1,4 +1,6 @@
 
+![cats](https://cloud.githubusercontent.com/assets/8107962/23489845/96342ac0-fea9-11e6-89e0-a3fa0cbe239c.gif)
+
 Sections:
 * Stack
 * Implementation Details
