@@ -1,0 +1,43 @@
+{%extends "pins/base.html" %}
+{%block title %}Pins{% endblock %}
+{%block content %}
+{% if user.username %}
+    <div class="wrapper">
+    <div>
+       <h1 style="text-align:center;">Pins</h1>
+       <div class="row" style="text-align:center;">
+         <button type="button" class="btn btn-info btn-sm new-exp-btn" data-toggle="modal" data-target="#create-pin-modal">Create New Pin</button>
+         <div class="modal fade" id="create-pin-modal" role="dialog">
+           <div class="modal-dialog">
+           
+             <!-- Modal content-->
+             <div class="modal-content">
+               <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal">&times;</button>
+                 <h4 class="modal-title">Create New Pin</h4>
+               </div>
+               <div class="modal-body">
+                <form id="create-pin-form" method="post" action="/pins/">
+                {{ form.as_p }}
+                <input type="submit" value="Create Pin" />
+                {% csrf_token %}
+                </form>
+               </div>
+               <div class="modal-footer">
+                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+               </div>
+             </div>
+             
+           </div>
+         </div>
+       </div>
+    </div>
+       <div id="pin-container" style="position:absolute;height:100%;width:100%;margin:20px;">
+       </div>
+    </div>
+{% else %}
+<p>Welcome mysterious user!
+You need to login to see the pins.</p><br/>
+{% endif %}
+{% endblock %}
+
