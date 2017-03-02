@@ -143,13 +143,12 @@ Note: this project uses django 1.8, so you must install that version. If you jus
 ```
     pip install django==1.8
     pip install requirements
+```
+Those 2 dependencies are all you need. 
 
 4) `Six` issue when installing packages
   * go here: github.com/pypa/pip/issues/3165
 
-```
-
-Those 2 dependencies are all you need. 
 
 
 **Further Improvements**
